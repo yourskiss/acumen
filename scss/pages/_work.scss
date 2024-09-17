@@ -1,0 +1,49 @@
+ 
+.workwrap {
+    width: 100%; float:left; padding:0 0 5rem 0;  @include fCS();  
+    
+
+
+
+    .work_two_box { 
+        width: 100%; margin: 0; padding: 0; display: grid;  gap: 2rem;  grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(1, 1fr);
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_two_left { grid-column-start: 1; grid-row-start: 1; }
+        .work_two_right { grid-column-start: 2; grid-row-start: 1; }
+    }
+    .work_one_box { 
+        width: 100%; margin:2rem 0; padding: 0; display: grid; grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_one_main { grid-column-start: 1; grid-row-start: 1; }
+    }
+    .work_four_box {
+        width: 100%; margin:0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2rem;
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_four_left_top { grid-column-start: 1; grid-row-start: 1;}
+        .work_four_left_bott { grid-column-start: 1; grid-row-start: 2;}
+        .work_four_right { grid-row: span 2 / span 2; grid-column-start: 2; grid-row-start: 1; }
+    }
+    .work_three_box { 
+        width: 100%;  margin: 2rem 0 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_three_left { grid-column-start: 1; grid-row-start: 1; }
+        .work_three_mid { grid-column-start: 2; grid-row-start: 1; }
+        .work_three_right { grid-column-start: 3; grid-row-start: 1; }
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width:1565px) 
+{
+ 
+    .workwrap {
+     padding:0 0 4rem 0;  
+        
+    }
+
+
+}

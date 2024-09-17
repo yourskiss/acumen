@@ -938,7 +938,7 @@ html, body {
   color: #4242FF;
 }
 .header nav ul li span.workmenuactive:after {
-  content: "\f107";
+  content: "\f106";
 }
 .header nav em {
   width: 20px;

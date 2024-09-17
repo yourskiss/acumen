@@ -1,13 +1,13 @@
 /* ############### bannerhome ############### */
 .bannerhome { 
-    width: 100%; float:left;  @include fCC();  
+    width: 100%; float:left;  @include fCS();  
     img { width:100%; }
 }
 
 
 /* ############### hometext ############### */
 .hometext {
-    width: 100%; float:left; padding:5rem 0;  @include fCC();  
+    width: 100%; float:left; padding:5rem 0;  @include fCS();  
     .wrapper { max-width:1000px; }
     p {
         font-size: 3.5rem; color: $blk1; line-height: 1.4; 
@@ -23,7 +23,7 @@
 .homework { 
     width: 100%; float:left; padding:0 0 5rem 0;  @include fCS();  
     h1 { margin: 0 0 2rem 0; font-size: 3.4rem; color: $blu1; font-weight: 700; }
-    img { width: 100%; }
+    img { width: 100%;  }
     h2 { margin: 1.5rem 0 1rem 0; font-size: 2rem; color: $blk1;  font-weight: 600; }
     p { font-size: 1.2rem; color: $blk9; line-height: 1.4; font-weight: 400; }
     
@@ -41,6 +41,10 @@
         }
     }
 }
+
+
+
+
 
 @media only screen and (max-width:1565px) 
 {
