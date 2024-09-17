@@ -1,0 +1,62 @@
+.header { 
+    width: 100%; height: 100px; float:left;  @include fCC();  
+    .wrapper {  @include fBC(); }
+    aside { 
+        max-width:161px; 
+        img { width:100%; }
+    }
+    
+    nav { 
+        width: calc(100% - 170px); height:auto; float: right; padding:0; @include fEC();
+        ul {
+            width: calc(100% - 52px); float: right; text-align: right;
+            li {
+                display: inline-block; list-style: none; margin: 0 2rem;
+                a {
+                    font-size: 1.4rem; cursor: pointer; text-decoration: none; color: $blk6; @include inT(); 
+                    &:hover { color: $blu1; @include outT(); }
+                    &.activemenu { font-weight: 600; color: $blk1;  pointer-events: none; user-select: none; }
+                }
+            }
+        }
+        em {
+            width: 20px; margin-left: 2rem; float: right; text-align: right; font-size: 1.5rem; cursor: pointer; color: $blk6; @include inT(); 
+            &:hover { color: $blu1; @include outT(); }
+        }
+    }
+}
+
+
+ 
+
+@media only screen and (max-width:1565px) 
+{
+    .header { 
+        aside { max-width:150px; }
+        nav { 
+            width: calc(100% - 170px);
+            ul {
+                width: calc(100% - 52px); 
+                li {
+                    margin: 0 1.5rem;
+                    a {font-size: 1.2rem; }
+                }
+            }
+            em { width: 20px; margin-left: 2rem;  font-size: 1.3rem; }
+        }
+    }  
+}
+
+
+
+@media only screen and (max-width:1255px) 
+{
+
+ 
+}
+
+
+@media only screen and (max-width:479px) 
+{
+     
+}
