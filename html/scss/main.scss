@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+@import "main/_var.scss";
+@import "main/_mixin.scss"; 
+@import "main/_normalize.scss";
+@import "main/_slick.scss";
+@import "main/_structure.scss";
+
+@import "parts/_header.scss";
+@import "parts/_footer.scss";
+@import "parts/_searchpopup.scss";
+@import "parts/_banner.scss";
+
+@import "pages/_home.scss";
+@import "pages/_work.scss";
+@import "pages/_about.scss";
+@import "pages/_contact.scss";

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"  />
+ 
+
+    <title>Acumen</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+
+</head>
+<body>
+<main class="main">
+<div class="mainwrap">
+
+    <!-- header start -->
+    <header class="header">
+        <div class="wrapper">
+            <aside>
+                <a href="/"><img src="./images/logo.png" alt="logo" /></a>
+            </aside>
+            <nav>
+                <ul id="page_container">
+                    <li><a href="index.html" id="page_home">Home</a></li>
+                    <li><a href="work.html" id="page_work">Work</a> <span id="page_dropdown"></span></li>
+                    <li><a href="about-us.html" id="page_about">About Us</a></li>
+                    <li><a href="contact.html" id="page_contact">Contact</a></li>
+                </ul>
+                <em onclick="showHideSearchBar('show');"><i class="fa fa-search" aria-hidden="true"></i></em>
+            </nav>
+        </div>
+        <div class="headercontainer" id="page_workmenu">
+            <ul>
+                <li><em>Work</em><span></span></li>
+                <li><a href="/">Identity</a></li>
+                <li><a href="/">Communications</a></li>
+                <li><a href="/">Packaging</a></li>
+                <li><a href="/">Campaigns</a></li>
+                <li><a href="/">Digital</a></li>
+                <li><a href="/">Films</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+
+    <!-- contactwrap start -->
+    <section class="contactwrap">
+        <div class="wrapper">
+
+  
+            <h1> Contact us</h1>
+
+        </div>
+     </section>
+     <!-- contactwrap End -->
+    
+
+
+
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footersocial">
+                <a href="https://www.facebook.com//" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </div>
+            <div class="footercontainer">
+                <div class="footerbox">
+                    <dl>
+                        <dt>NEW DELHI<a href="mailto:del@withacumen.in">del@withacumen.in</a></dt>
+                        <dd>Gate No. 1, ABW Tower, 109, Rectangle One, Saket District Centre, Sector 6, Pushp Vihar,New Delhi, Delhi 110017</dd>
+                    </dl>
+                    <dl>
+                        <dt>MUMBAI<a href="mailto:mum@withacumen.in">mum@withacumen.in</a></dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</dd>
+                    </dl>
+                </div>
+                <div class="footerbox footerbox2">
+                    <h2>Talk to us or ask us anything.</h2>
+                    <ul>          
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Work with us</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer End -->
+
+</div>
+</main>
+ 
+
+
+
+
+<!-- pageloader start -->
+<div class="pageloader" id="pageloader">
+    <div>
+        <aside></aside>
+        <h2>Loading...</h2>
+    </div>
+</div>
+<!-- pageloader End -->
+
+
+
+<!-- searchpopup start -->
+<div id="searchpopupheader" class="searchpopup">
+    <aside class="searchHeadclose" onclick="showHideSearchBar('hide');"><i class="fa fa-times" aria-hidden="true"></i></aside>
+    <section>
+        <div class="searchcontainer">
+            <input class="searchHeadInput" type="text" name="searchInput" id="searchInput" placeholder="Enter keyword">
+            <input class="searchHeadButton" type="submit" name="searchButton" id="searchButton" value="Search" onclick="searchvalidation();">
+        </div>
+        <div class="searchErrorMessage" id="searchError">Error message</div>
+        <ul class="searchsuggestions">
+            <li>Work:</li>
+            <li><a href="/">Identity</a></li>
+            <li><a href="/">Communications</a></li>
+            <li><a href="/">Packaging</a></li>
+            <li><a href="/">Campaigns</a></li>
+            <li><a href="/">Digital</a></li>
+            <li><a href="/">Films</a></li>
+        </ul>
+    </section>
+</div>
+<!-- searchpopup End -->
+
+
+
+
+
+
+
+     
+<script src="js/jquery.min.js"></script>
+<script src="js/lazy.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
