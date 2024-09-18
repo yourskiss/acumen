@@ -1770,11 +1770,111 @@ img.lazy {
 .contactwrap {
   width: 100%;
   float: left;
-  padding: 1rem 0 5rem 0;
+  padding: 5rem 0;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.contactwrap h1 {
+.contactwrap .contactcontainer {
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.contactwrap .contactcontainer h2 {
+  width: 100%;
+  float: left;
+  margin: 0 0 2rem 0;
   font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contactwrap .contactcontainer .contactAddress {
+  width: 35%;
+  float: right;
+}
+.contactwrap .contactcontainer .contactAddress p {
+  font-size: 1.2rem;
+  color: #A0A0A0;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.contactwrap .contactcontainer .contactFrom {
+  width: 60%;
+  float: left;
+}
+.contactwrap .contactcontainer .contactFrom .contactField {
+  width: 100%;
+  float: left;
+  margin: 0 0 1.5rem 0;
+}
+.contactwrap .contactcontainer .contactFrom .contactField.cfLeft {
+  width: 48%;
+}
+.contactwrap .contactcontainer .contactFrom .contactField.cfRight {
+  width: 48%;
+  float: right;
+}
+.contactwrap .contactcontainer .contactFrom .contactField.cfCenter {
+  text-align: center;
+}
+.contactwrap .contactcontainer .contactFrom .contactField p {
+  width: 100%;
+  float: left;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.contactwrap .contactcontainer .contactFrom .contactField p small {
+  font-size: 80%;
+  color: #888888;
+}
+.contactwrap .contactcontainer .contactFrom .contactField .fcInput {
+  width: 100%;
+  float: left;
+  background: #FFFFFF;
+  margin: 0;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  color: #000000;
+}
+.contactwrap .contactcontainer .contactFrom .contactField .fcError {
+  display: none;
+  width: 100%;
+  float: left;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
+  color: #DB0303;
+  line-height: 1;
+}
+.contactwrap .contactcontainer .contactFrom .contactField .fcButton {
+  display: inline-block;
+  background-image: linear-gradient(to bottom, #4242FF, #070769);
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+  border-radius: 40px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.contactwrap .contactcontainer .contactFrom .contactField .fcButton:hover {
+  transition: all 0.4s ease-in;
+  background-image: linear-gradient(to bottom, #070769, #4242FF);
+  color: #FEFEFE;
+}
+.contactwrap .contactmap {
+  margin: 5rem 0 0 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+.contactwrap .contactmap img {
+  width: 100%;
+  float: left;
 }/*# sourceMappingURL=main.css.map */

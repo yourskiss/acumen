@@ -53,8 +53,52 @@
     <section class="contactwrap">
         <div class="wrapper">
 
-  
-            <h1> Contact us</h1>
+            <div class="contactcontainer">
+                <h2>WRITE TO US</h2>
+                <div class="contactFrom"> 
+                    <form>
+                        <div class="contactField cfLeft">
+                            <p>First Name <small>(required)</small></p>
+                            <input class="fcInput" type="text" name="firstname" id="firstname" required />
+                            <span class="fcError" id="error_firstname">First Name Required</span>
+                        </div>
+                        <div class="contactField cfRight">
+                            <p>Last Name</p>
+                            <input class="fcInput" type="text" name="lastname" id="lastname" />
+                            <span class="fcError" id="error_lastname">Last Name Required</span>
+                        </div>
+                        <div class="contactField">
+                            <p>Email Address  <small>(required)</small></p>
+                            <input class="fcInput" type="text" name="emailid" id="emailid" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+                            <span class="fcError" id="error_emailid">Email Address Required</span>
+                        </div>
+                        <div class="contactField">
+                            <p>Subject  <small>(required)</small></p>
+                            <input class="fcInput" type="text" name="subject" id="subject" required />
+                            <span class="fcError" id="error_subject">Subject Required</span>
+                        </div>
+                        <div class="contactField">
+                            <p>Message  <small>(required)</small></p>
+                            <input class="fcInput" type="text" name="message" id="message" required />
+                            <span class="fcError" id="error_message">Message Required</span>
+                        </div>
+                        <div class="contactField cfCenter">
+                            <button class="fcButton" type="submit" id="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contactAddress">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qdeserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+            
+            
+            <div class="contactmap">
+                <img class="lazy" data-src="images/map.jpg" alt="map" />
+            </div>
+
 
         </div>
      </section>
