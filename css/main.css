@@ -1480,10 +1480,71 @@ img.lazy {
   justify-content: center;
   align-items: flex-start;
 }
+.workwrap .breadcrumb {
+  display: none;
+  width: 100%;
+  float: left;
+  margin: 1rem 0 1rem 0;
+  padding: 0;
+}
+.workwrap .breadcrumb dl {
+  width: 100%;
+  float: left;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.workwrap .breadcrumb dl dd {
+  list-style: none;
+  margin: 0 1rem 0 0;
+  font-size: 1.2rem;
+  color: #A0A0A0;
+  line-height: 1.4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.workwrap .breadcrumb dl dd strong {
+  font-weight: 500;
+  font-style: normal;
+}
+.workwrap .breadcrumb dl dd b {
+  margin: 0 1rem;
+  float: left;
+  width: 40px;
+  height: 2px;
+  background-color: #A0A0A0;
+  line-height: 0;
+  font-size: 0;
+}
+.workwrap .breadcrumb dl dt {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.4;
+}
+.workwrap .breadcrumb dl dt a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.4s ease-in;
+}
+.workwrap .breadcrumb dl dt a:hover {
+  color: #4242FF;
+  transition: all 0.4s ease-out;
+}
+.workwrap .breadcrumb dl dt a.active {
+  color: #000000;
+}
 .workwrap .work_two_box {
   width: 100%;
   margin: 0;
   padding: 0;
+  float: left;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
@@ -1506,6 +1567,7 @@ img.lazy {
   width: 100%;
   margin: 2rem 0;
   padding: 0;
+  float: left;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -1524,6 +1586,7 @@ img.lazy {
   width: 100%;
   margin: 0;
   padding: 0;
+  float: left;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -1551,6 +1614,7 @@ img.lazy {
   width: 100%;
   margin: 2rem 0 0 0;
   padding: 0;
+  float: left;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -1714,6 +1778,9 @@ img.lazy {
 @media only screen and (max-width: 1023px) {
   .workwrap {
     padding: 0 0 3rem 0;
+  }
+  .workwrap .breadcrumb {
+    display: block;
   }
   .workwrap .work_two_box {
     gap: 1rem;

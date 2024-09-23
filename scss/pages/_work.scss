@@ -1,27 +1,47 @@
  
 .workwrap {
     width: 100%; float:left; padding:0 0 5rem 0;  @include fCS();  
+
+    .breadcrumb {
+        display: none; width: 100%; float: left;  margin: 1rem 0 1rem 0; padding: 0; 
+        dl {
+            width: 100%; float: left;  margin: 0; @include fSC();
+            dd {
+                list-style: none; margin: 0 1rem 0 0; font-size:1.2rem; color: $blk6; line-height: 1.4;  @include fBC(); text-align: left;
+                strong { font-weight: 500; font-style: normal; }
+                b { margin:0 1rem; float: left; width: 40px; height: 2px; background-color: $blk6; line-height: 0; font-size: 0; }
+            }
+            dt{
+                list-style: none; display: inline-block; margin: 0 1rem 0 0; font-size:1.2rem; color: $blk1; line-height: 1.4; 
+                a {
+                    cursor: pointer; text-decoration: none; color: $blk1; @include inT(); 
+                    &:hover { color: $blu1; @include outT(); }
+                    &.active { color: $blk1; }
+                }
+            }
+        }
+    }
     
     .work_two_box { 
-        width: 100%; margin: 0; padding: 0; display: grid;  gap: 2rem;  grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(1, 1fr);
+        width: 100%; margin: 0; padding: 0; float: left;  display: grid;  gap: 2rem;  grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(1, 1fr);
         img { width: 100%;  object-fit: cover; height: 100%;  }
         .work_two_left { grid-column-start: 1; grid-row-start: 1; }
         .work_two_right { grid-column-start: 2; grid-row-start: 1; }
     }
     .work_one_box { 
-        width: 100%; margin:2rem 0; padding: 0; display: grid; grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        width: 100%; margin:2rem 0; padding: 0; float: left;  display: grid; grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
         img { width: 100%;  object-fit: cover; height: 100%;  }
         .work_one_main { grid-column-start: 1; grid-row-start: 1; }
     }
     .work_four_box {
-        width: 100%; margin:0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2rem;
+        width: 100%; margin:0; padding: 0; float: left;  display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2rem;
         img { width: 100%;  object-fit: cover; height: 100%;  }
         .work_four_left_top { grid-column-start: 1; grid-row-start: 1;}
         .work_four_left_bott { grid-column-start: 1; grid-row-start: 2;}
         .work_four_right { grid-row: span 2 / span 2; grid-column-start: 2; grid-row-start: 1; }
     }
     .work_three_box { 
-        width: 100%;  margin: 2rem 0 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        width: 100%;  margin: 2rem 0 0 0; padding: 0; float: left;  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
         img { width: 100%;  object-fit: cover; height: 100%;  }
         .work_three_left { grid-column-start: 1; grid-row-start: 1; }
         .work_three_mid { grid-column-start: 2; grid-row-start: 1; }
@@ -108,6 +128,10 @@
 {
     .workwrap {
          padding:0 0 3rem 0;  
+
+         .breadcrumb { display: block;  }
+
+
         .work_two_box { gap:1rem;  }
         .work_one_box { 
              margin:1rem 0; gap: 1rem; 
