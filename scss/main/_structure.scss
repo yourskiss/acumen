@@ -1,0 +1,20 @@
+
+* { margin:0; padding:0; border:0; outline:0; box-sizing:border-box; } 
+html, body { margin:0; padding:0; border:0; outline:0; font-family: 'Onest', sans-serif;line-height:1.2; letter-spacing: normal;letter-spacing: normal;color: $blk1;background-color: $wht1;box-sizing:border-box;font-weight: 400; font-size: 16px; }
+.main { display: block; width: 100%;  float:left; overflow: hidden; }
+.mainwrap { display: flow-root; width: 100%; max-width: 1920px; float: none; margin: 0 auto; }
+.wrapper { display: flow-root; width: 95%; max-width: 1600px; float: none; margin: 0 auto; }
+
+img.lazy {  background:none; }
+ 
+
+
+/* ################### pageloader ################### */
+.pageloader {display: none;position: fixed;left: 0;top: 0;z-index: 9;width: 100%;height: 100%;margin: 0;padding: 0;background: #000000; background: rgba(0, 0, 0, 0.8);text-align: center;}
+.pageloader div { position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 260px; height: auto; @include fCC();  flex-direction: column; }
+.pageloader div aside { border:7px solid $wht1; border-radius: 50%; border-top:7px solid $blu1;width:60px;height:60px;-webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite; }
+.pageloader div h2 {  width: 100%; float: left; margin: 2rem 0 0 0; padding: 0; text-align: center; color:$wht1; line-height: 1; font-size:18px; font-weight:normal;  text-transform: none; } 
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }  100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+

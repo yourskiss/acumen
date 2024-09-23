@@ -1,0 +1,221 @@
+ 
+.workwrap {
+    width: 100%; float:left; padding:0 0 5rem 0;  @include fCS();  
+    
+    .work_two_box { 
+        width: 100%; margin: 0; padding: 0; display: grid;  gap: 2rem;  grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(1, 1fr);
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_two_left { grid-column-start: 1; grid-row-start: 1; }
+        .work_two_right { grid-column-start: 2; grid-row-start: 1; }
+    }
+    .work_one_box { 
+        width: 100%; margin:2rem 0; padding: 0; display: grid; grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_one_main { grid-column-start: 1; grid-row-start: 1; }
+    }
+    .work_four_box {
+        width: 100%; margin:0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2rem;
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_four_left_top { grid-column-start: 1; grid-row-start: 1;}
+        .work_four_left_bott { grid-column-start: 1; grid-row-start: 2;}
+        .work_four_right { grid-row: span 2 / span 2; grid-column-start: 2; grid-row-start: 1; }
+    }
+    .work_three_box { 
+        width: 100%;  margin: 2rem 0 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(1, 1fr); gap: 2rem; 
+        img { width: 100%;  object-fit: cover; height: 100%;  }
+        .work_three_left { grid-column-start: 1; grid-row-start: 1; }
+        .work_three_mid { grid-column-start: 2; grid-row-start: 1; }
+        .work_three_right { grid-column-start: 3; grid-row-start: 1; }
+    }
+
+    .workinfo {
+        margin:2rem 0 0 0; padding: 0; width: 100%;  float: left;  display: grid;  gap: 2rem;  grid-template-columns: repeat(2, 1fr);  grid-template-rows: repeat(1, 1fr);
+        .workinfoleft { 
+            grid-column-start: 1; grid-row-start: 1; 
+            h2 { margin: 0 0 1rem 0; font-size: 2.2rem; color: $blk1;  font-weight: 600; }
+            p { font-size: 1.4rem; color: $blk6; line-height: 1.4; font-weight: 400; }
+        }
+        .workinforight { 
+            grid-column-start: 2; grid-row-start: 1; 
+            p { font-size: 1.4rem; color: $blk3; line-height: 1.4; font-weight: 400; }
+        }
+    }
+    .workOne { 
+        margin:2rem 0 0 0; padding: 0; width: 100%;  float: left; display: grid;  gap: 2rem; 
+        div { 
+            img { width: 100%;}
+            grid-column-start: 1; grid-row-start: 1; 
+        }
+    }
+    .workTwoBigOne { 
+       margin: 2rem 0 0 0; padding: 0; width: 100%;  float: left; display: grid;  gap: 2rem;  grid-template-columns: repeat(1, 3fr);  grid-template-rows: repeat(1, 1fr); 
+        div { 
+            img { width: 100%; object-fit: cover; height: 100%;}
+            &:first-child { grid-column-start: 1; grid-row-start: 1; }
+            &:last-child { grid-column-start: 2; grid-row-start: 1; }
+        }
+    }
+    .workTwoMultiple {
+        margin: 2rem 0 0 0; padding: 0; width: 100%;  float: left; display: grid;  gap: 2rem;   
+        div { 
+            img { width: 100%; }
+            img.marginbottom { margin-bottom: 2rem; }
+            &:first-child { grid-column-start: 1; grid-row-start: 1; }
+            &:last-child { grid-column-start: 2; grid-row-start: 1; }
+        }
+    }
+    .workTwo { 
+        margin: 2rem 0 0 0; padding: 0;width: 100%;  float: left; display: grid;  gap: 2rem;  
+        div { 
+            img { width: 100%; object-fit:cover; height: 100%; }
+            &:first-child {  grid-column-start: 1; grid-row-start: 1; }
+            &:last-child {  grid-column-start: 2; grid-row-start: 1; }
+        }
+    }
+    
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width:1565px) 
+{
+ 
+    .workwrap {
+     padding:0 0 4rem 0;  
+        .workinfo {
+            .workinfoleft { 
+                h2 { font-size: 2rem;  }
+                p { font-size: 1.2rem; line-height: 1.3;  }
+            }
+            .workinforight { 
+                grid-column-start: 2; grid-row-start: 1; 
+                p { font-size: 1.2rem;  line-height: 1.3;  }
+            }
+        }
+
+    }
+
+
+}
+
+ 
+@media only screen and (max-width:1023px) 
+{
+    .workwrap {
+         padding:0 0 3rem 0;  
+        .work_two_box { gap:1rem;  }
+        .work_one_box { 
+             margin:1rem 0; gap: 1rem; 
+        }
+        .work_four_box {
+            gap: 1rem;
+        }
+        .work_three_box { 
+             margin:1rem 0 0 0; gap: 1rem; 
+        }
+
+        .workinfo {
+            margin:1rem 0 0 0; gap: 1rem; grid-template-columns: repeat(1, 1fr);  
+            .workinfoleft { 
+                grid-column-start: 1; grid-row-start: 1; 
+                h2 { margin: 0 0 0.5rem 0; font-size: 1.5rem;   }
+                p { font-size: 1.1rem; line-height: 1.3;  }
+            }
+            .workinforight { 
+                grid-column-start: 1; grid-row-start: 2; 
+                p { font-size: 1.1rem;  line-height: 1.3; }
+            }
+        }
+        .workOne { 
+            margin:1rem 0 0 0; gap: 1rem; 
+        }
+        .workTwoBigOne { 
+            margin: 1rem 0 0 0;  gap: 1rem;  
+        }
+        .workTwoMultiple {
+            margin: 1rem 0 0 0; gap: 1rem;   
+            div { 
+                img.marginbottom { margin-bottom: 1rem; }
+            }
+        }
+        .workTwo { 
+            margin: 1rem 0 0 0; gap: 1rem;  
+        }
+        
+
+
+    }
+}
+
+
+
+@media only screen and (max-width:479px) 
+{
+    
+    .workwrap {
+        .work_two_box { 
+            grid-template-columns: repeat(1, 1fr);    
+            .work_two_left { grid-column-start: 1; grid-row-start: 1; }
+            .work_two_right { grid-column-start: 1; grid-row-start: 2; }
+        }
+        .work_one_box { 
+             grid-template-columns: repeat(1, 1fr);  
+            .work_one_main { grid-column-start: 1; grid-row-start: 1; }
+        }
+        .work_four_box {
+            grid-template-columns: repeat(1, 1fr);   
+            .work_four_left_top { grid-column-start: 1; grid-row-start: 1;}
+            .work_four_left_bott { grid-column-start: 1; grid-row-start: 2;}
+            .work_four_right { grid-column-start: 1; grid-row-start: 3; }
+        }
+        .work_three_box { 
+            grid-template-columns: repeat(1, 1fr);    
+            .work_three_left { grid-column-start: 1; grid-row-start: 1; }
+            .work_three_mid { grid-column-start: 1; grid-row-start: 2; }
+            .work_three_right { grid-column-start: 1; grid-row-start: 3; }
+        }
+
+        .workinfo {
+            grid-template-columns: repeat(1, 1fr);  
+            .workinfoleft { 
+                grid-column-start: 1; grid-row-start: 1; 
+            }
+            .workinforight { 
+                grid-column-start: 1; grid-row-start: 2; 
+            }
+        }
+        .workOne { 
+            grid-template-columns: repeat(1, 1fr); 
+            div { 
+                grid-column-start: 1; grid-row-start: 1; 
+            }
+        }
+        .workTwoBigOne { 
+            grid-template-columns: repeat(1, 1fr);  
+            div { 
+                &:first-child { grid-column-start: 1; grid-row-start: 1; }
+                &:last-child { grid-column-start: 1; grid-row-start: 2; }
+            }
+        }
+        .workTwoMultiple { 
+            grid-template-columns: repeat(1, 1fr); 
+            div { 
+                &:first-child { grid-column-start: 1; grid-row-start: 1; }
+                &:last-child { grid-column-start: 1; grid-row-start: 2; }
+            }
+        }
+        .workTwo { 
+            grid-template-columns: repeat(1, 1fr); 
+            div { 
+                &:first-child {  grid-column-start: 1; grid-row-start: 1; }
+                &:last-child {  grid-column-start: 1; grid-row-start: 2; }
+            }
+        }
+    }
+        
+}

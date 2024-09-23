@@ -1,0 +1,85 @@
+ 
+.contactwrap {
+    width: 100%; float:left; padding:5rem 0; background: $blk1; @include fCS();  
+    
+    .contactcontainer {
+        width: 100%; float:left; @include fBS(); flex-wrap: wrap;
+        h2 { width: 100%; float: left; margin:0 0 2rem 0; font-size: 2rem; color: $wht1; font-weight: 600; text-transform: uppercase; }
+        .contactAddress {
+            width:35%; float: right;
+            p { font-size: 1.2rem; color: $blk6; line-height: 1.4; font-weight: 400; }
+        }
+        .contactFrom { 
+            width:60%; float: left;
+            .contactField  { 
+                width: 100%; float: left;  margin: 0 0 1.5rem 0;
+                &.cfLeft { width: 48%; }
+                &.cfRight { width: 48%; float: right; }
+                &.cfCenter { text-align: center;}
+                p { 
+                    width: 100%; float: left; margin: 0 0 0.5rem 0; font-size: 1rem; color: $wht1;    
+                    small { font-size: 80%; color: $blk5; }
+                }
+                .fcInput { width: 100%; float: left;   background: $wht1; margin: 0; padding:1rem 1rem; font-size: 1rem; color: $blk1;   }
+                .fcError { display: none; width: 100%; float: left; margin: 0.5rem 0 0 0; font-size:0.8rem; color: $red1; line-height: 1; }
+                .fcButton {
+                    display: inline-block;  background-image: linear-gradient(to bottom, $blu1, $blu2); font-size: 1rem;  padding: 1rem 3rem; margin: 0 auto; border-radius: 40px;  color: $wht1; text-transform: uppercase; cursor: pointer; @include outT();
+                    &:hover {  @include inT(); background-image:linear-gradient(to bottom, $blu2, $blu1); color: $wht2; }
+                }
+            }
+        }
+    }
+    .contactmap { 
+        margin:5rem 0 0 0; padding: 0; width: 100%;  float: left;   
+        img { width: 100%; float: left; }
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width:1565px) 
+{
+    .contactwrap {
+        padding:3rem 0; 
+        .contactcontainer {
+            h2 { margin:0 0 2rem 0; font-size: 1.6rem;  }
+            .contactAddress {
+                p { font-size: 0.9rem; line-height: 1.3;  }
+            }
+            .contactFrom { 
+                .contactField  { 
+                    margin: 0 0 1.5rem 0;
+                    p { 
+                       font-size: 1rem; 
+                    }
+                    .fcInput { padding:1rem ; font-size: 1rem;  }
+                    .fcButton {
+                         font-size: 1rem;  padding: 1rem 2rem; 
+                    }
+                }
+            }
+        }
+        .contactmap { 
+            margin:3rem 0 0 0;  
+        }
+    }
+    
+ 
+
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+ 
+    .contactwrap {
+        .contactcontainer {
+            .contactAddress {width:100%; margin: 2rem 0 0 0;   }
+            .contactFrom { width:100%;  }
+        }
+    }
+
+}
