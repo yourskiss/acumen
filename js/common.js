@@ -17,7 +17,7 @@ $(window).on("load", function(){
     
     /* ############### header menu active === start ############### */
     var pagename = document.location.pathname;
-    if(pagename == '/index.html' || pagename == '')
+    if(pagename == '/index.html' || pagename == '/' || pagename == '')
     {
         $("#page_home").addClass("activemenu");
     }
