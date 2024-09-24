@@ -1480,6 +1480,9 @@ img.lazy {
   justify-content: center;
   align-items: flex-start;
 }
+.workwrap .imgborder {
+  border: solid 1px #C0C0C0;
+}
 .workwrap .breadcrumb {
   display: none;
   width: 100%;
@@ -1996,9 +1999,16 @@ img.lazy {
   font-size: 2.5rem;
   color: #000000;
   line-height: 1.4;
+  font-weight: 700;
+}
+.aboutwrap .aboutportfolio .ap_right h3 {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.8rem;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 600;
 }
 .aboutwrap .aboutportfolio .ap_right p {
-  margin-top: 2rem;
   font-size: 1.4rem;
   color: #000000;
   line-height: 1.4;
@@ -2053,10 +2063,21 @@ img.lazy {
 .aboutwrap .aboutservices h2 {
   width: 100%;
   float: left;
-  padding: 0 0 2rem 0;
   font-size: 2.2rem;
   color: #000000;
   line-height: 1.4;
+}
+.aboutwrap .aboutservices h6 {
+  width: 100%;
+  float: left;
+  padding: 0.5rem 0 3rem 0;
+  font-size: 1.1rem;
+  color: #444444;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.aboutwrap .aboutservices h6 span {
+  color: #4242FF;
 }
 .aboutwrap .aboutservices ul {
   width: 100%;
@@ -2081,8 +2102,12 @@ img.lazy {
   width: 100%;
   float: left;
   font-size: 1.1rem;
-  color: #222222;
+  color: #444444;
   line-height: 1.3;
+}
+.aboutwrap .aboutservices ul.as_list {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
 }
 
 @media only screen and (max-width: 1565px) {
@@ -2107,8 +2132,10 @@ img.lazy {
   .aboutwrap .aboutportfolio .ap_right h2 {
     font-size: 2.2rem;
   }
+  .aboutwrap .aboutportfolio .ap_right h3 {
+    font-size: 1.4rem;
+  }
   .aboutwrap .aboutportfolio .ap_right p {
-    margin-top: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.2;
   }
@@ -2131,9 +2158,12 @@ img.lazy {
     padding: 2rem 0 3rem 0;
   }
   .aboutwrap .aboutservices h2 {
-    padding: 0 0 1.5rem 0;
     font-size: 2rem;
     line-height: 1.3;
+  }
+  .aboutwrap .aboutservices h6 {
+    padding: 0.5rem 0 2.5rem 0;
+    font-size: 1rem;
   }
   .aboutwrap .aboutservices ul li h3 {
     font-size: 1.2rem;
@@ -2166,8 +2196,10 @@ img.lazy {
   .aboutwrap .aboutportfolio .ap_right h2 {
     font-size: 1.6rem;
   }
+  .aboutwrap .aboutportfolio .ap_right h3 {
+    font-size: 1.1rem;
+  }
   .aboutwrap .aboutportfolio .ap_right p {
-    margin-top: 1rem;
     font-size: 0.9rem;
   }
   .aboutwrap .aboutbrand {
@@ -2185,12 +2217,15 @@ img.lazy {
     max-width: 200px;
   }
   .aboutwrap .aboutservices {
-    padding: 2rem 0 0 0;
+    padding: 2rem 0 3rem 0;
     border-top-width: 1px;
   }
   .aboutwrap .aboutservices h2 {
-    padding: 0 0 1rem 0;
     font-size: 1.6rem;
+  }
+  .aboutwrap .aboutservices h6 {
+    padding: 0.5rem 0 2rem 0;
+    font-size: 0.9rem;
   }
   .aboutwrap .aboutservices ul {
     gap: 1.5rem;
@@ -2224,10 +2259,11 @@ img.lazy {
     padding: 2rem 0 2rem 0;
   }
   .aboutwrap .aboutbrand ul {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+    grid-template-columns: repeat(2, 1fr);
   }
   .aboutwrap .aboutbrand ul li img {
-    max-width: 190px;
+    max-width: 150px;
   }
   .aboutwrap .aboutservices {
     padding: 2rem 0 0 0;
@@ -2235,6 +2271,7 @@ img.lazy {
   .aboutwrap .aboutservices ul {
     gap: 1rem;
     grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
 }
 .contactwrap {
@@ -2272,6 +2309,16 @@ img.lazy {
   color: #A0A0A0;
   line-height: 1.4;
   font-weight: 400;
+}
+.contactwrap .contactcontainer .contactAddress p a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #4242FF;
+  transition: all 0.4s ease-in;
+}
+.contactwrap .contactcontainer .contactAddress p a:hover {
+  color: #FFFFFF;
+  transition: all 0.4s ease-out;
 }
 .contactwrap .contactcontainer .contactFrom {
   width: 60%;
