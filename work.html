@@ -32,21 +32,7 @@
             <nav class="headerNavigation" id="headerNavigation">
                 <ul>
                     <li><a href="index.html" id="page_home">Home</a></li>
-                    <li class="headerDropdownContainer">
-                        <a href="work.html" id="page_work">Work</a> 
-                        <span id="headerDropdownIcon"></span>
-                        <div class="headerContainer" id="headerContainer">
-                            <dl>
-                                <dd><strong>Work</strong><b></b></dd>
-                                <dt><a href="#">Identity</a></dt>
-                                <dt><a href="#">Communications</a></dt>
-                                <dt><a href="#">Packaging</a></dt>
-                                <dt><a href="#">Campaigns</a></dt>
-                                <dt><a href="#">Digital</a></dt>
-                                <dt><a href="#">Films</a></dt>
-                            </dl>
-                        </div>
-                    </li>
+                    <li><a href="work.html" id="page_work">Work</a> </li>
                     <li><a href="about-us.html" id="page_about">About Us</a></li>
                     <li><a href="contact.html" id="page_contact">Contact</a></li>
                 </ul>
@@ -66,31 +52,89 @@
     <section class="workwrap">
         <div class="wrapper">
 
- 
- 
-
-            <div class="work_two_box">
-                <div class="work_two_left"><img class="lazy" data-src="images/work/trucksup.jpg" alt="trucksup" /></div>
-                <div class="work_two_right"><img class="lazy" data-src="images/work/gangour.jpg" alt="gangour" /></div>
-            </div>
-
-            <div class="work_one_box">
-                <div class="work_one_main"><img class="lazy" data-src="images/work/blank.jpg" alt="blank" /></div>
-            </div>
-
-            <div class="work_four_box">
-                <div class="work_four_left_top"><img class="lazy" data-src="images/work/the-golf-league-2023.jpg" alt="golfleague" /></div>
-                <div class="work_four_left_bott"><img class="lazy" data-src="images/work/roastery-coffee.jpg" alt="roasterycoffee" /></div>
-                <div class="work_four_right"><img class="lazy" data-src="images/work/foods.jpg" alt="foods" /></div>
-            </div>
-                
-
-            <div class="work_three_box">
-                <div class="work_three_left"><img class="lazy" data-src="images/work/bottels.jpg" alt="bottels" /></div>
-                <div class="work_three_mid"><img class="lazy" data-src="images/work/alba-bistro.jpg" alt="albabistro" /></div>
-                <div class="work_three_right"><img class="lazy" data-src="images/work/colocal.jpg" alt="colocal" /></div>
+            <div class="workmenu">
+                <dl>
+                    <dt id="worktab_work" class="workactive" onclick="filterwork('work');"><em>Work</em><span></span></dt>
+                    <dt id="worktab_identity" onclick="filterwork('identity');">Identity</a></dt>
+                    <dt id="worktab_communications" onclick="filterwork('communications');">Communications</a></dt>
+                    <dt id="worktab_packaging" onclick="filterwork('packaging');">Packaging</a></dt>
+                    <dt id="worktab_campaigns" onclick="filterwork('campaigns');">Campaigns</a></dt>
+                    <dt id="worktab_digital" onclick="filterwork('digital');">Digital</a></dt>
+                    <dt id="worktab_films" onclick="filterwork('films');">Films</dt>
+                </dl>
             </div>
  
+            <div class="workboxcontainer"  id="workbox_work" style="display: block;">
+                <div class="work_two_box">
+                    <div class="work_two_left" onclick="window.open('trucksup.html','_self');"><img class="lazy" data-src="images/work/trucksup.jpg" alt="trucksup" /></div>
+                    <div class="work_two_right" onclick="window.open('gangour.html','_self');"><img class="lazy" data-src="images/work/gangour.jpg" alt="gangour" /></div>
+                </div>
+                <div class="work_one_box">
+                    <div class="work_one_main" onclick="window.open('pair.html','_self');"><img class="lazy" data-src="images/work/blank.jpg" alt="blank" /></div>
+                </div>
+                <div class="work_four_box">
+                    <div class="work_four_left_top" onclick="window.open('hsbc.html','_self');"><img class="lazy" data-src="images/work/the-golf-league-2023.jpg" alt="golfleague" /></div>
+                    <div class="work_four_left_bott"><img class="lazy" data-src="images/work/roastery-coffee.jpg" alt="roasterycoffee" /></div>
+                    <div class="work_four_right"  onclick="window.open('yu.html','_self');"><img class="lazy" data-src="images/work/foods.jpg" alt="foods" /></div>
+                </div>
+                <div class="work_three_box">
+                    <div class="work_three_left"><img class="lazy" data-src="images/work/bottels.jpg" alt="bottels" /></div>
+                    <div class="work_three_mid"><img class="lazy" data-src="images/work/alba-bistro.jpg" alt="albabistro" /></div>
+                    <div class="work_three_right"><img class="lazy" data-src="images/work/colocal.jpg" alt="colocal" /></div>
+                </div>
+            </div>
+
+            
+            <div class="workboxcontainer" id="workbox_identity">
+                <div class="work_all_box">
+                    <div class="workall" onclick="window.open('trucksup.html','_self');"><img class="lazy" data-src="images/work-filter/trucksup.jpg" alt="trucksup" /></div>
+                    <div class="workall" onclick="window.open('gangour.html','_self');"><img class="lazy" data-src="images/work-filter/gangour.jpg" alt="gangour" /></div>
+                    <div class="workall" onclick="window.open('pair.html','_self');"><img class="lazy" data-src="images/work-filter/pair.jpg" alt="pair" /></div>
+                </div>
+            </div>
+
+
+            <div class="workboxcontainer" id="workbox_communications">
+                <div class="worknotfound">
+                    <aside><img src="images/notfound.png" alt="not found"></aside>
+                    <h2>Communications</h2>
+                    <p>Sorry, no results found </p>
+                </div>
+            </div>
+
+
+            <div class="workboxcontainer" id="workbox_packaging">
+                <div class="work_all_box">
+                    <div class="workall" onclick="window.open('gangour.html','_self');"><img class="lazy" data-src="images/work-filter/gangour.jpg" alt="gangour" /></div>
+                    <div class="workall"  onclick="window.open('yu.html','_self');"><img class="lazy" data-src="images/work-filter/yu-foods.jpg" alt="foods" /></div>
+                </div>
+            </div>
+
+
+            <div class="workboxcontainer" id="workbox_campaigns">
+                <div class="work_all_box">
+                    <div class="workall" onclick="window.open('trucksup.html','_self');"><img class="lazy" data-src="images/work-filter/trucksup.jpg" alt="trucksup" /></div>
+                    <div class="workall" onclick="window.open('hsbc.html','_self');"><img class="lazy" data-src="images/work-filter/hsbc.jpg" alt="golfleague" /></div>
+                </div>
+            </div>
+
+
+            <div class="workboxcontainer" id="workbox_digital">
+                <div class="worknotfound">
+                    <aside><img src="images/notfound.png" alt="not found"></aside>
+                    <h2>Digital</h2>
+                    <p>Sorry, no results found </p>
+                </div>
+            </div>
+
+
+            <div class="workboxcontainer" id="workbox_films">
+                <div class="worknotfound">
+                    <aside><img src="images/notfound.png" alt="not found"></aside>
+                    <h2>Films</h2>
+                    <p>Sorry, no results found </p>
+                </div>
+            </div>
  
 
         </div>
@@ -125,7 +169,7 @@
                 <div class="footerbox footerbox2">
                     <h2>Talk to us or ask us anything.</h2>
                     <ul>          
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Work with us</a></li>
                     </ul>
@@ -153,7 +197,7 @@
 <div class="pageloader" id="pageloader">
     <div>
         <aside></aside>
-        <h2>Loading...</h2>
+        <h2>Please wait...</h2>
     </div>
 </div>
 <!-- pageloader End -->

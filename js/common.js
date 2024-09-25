@@ -1,6 +1,6 @@
 $(function() {
     $('.lazy').lazy({
-        placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAThQTFRF////+/v/7+//2dn/tbX/oKD/mpr/n5//uLj/3t7/9vb/5+f/qKj/bW3/UVH/RUX/RET/Rkb/Vlb/i4v/4eH//v7/qqr/S0v/QkL/SUn/Skr/bm7/4OD/1dX/WVn/TEz/bGz/m5v/r6//srL/mJj/ZGT/lZX//f3/+Pj/xMT/6+v/+fn//Pz/cHD/Z2f/7e3/s7P/R0f/19f/9fX/5eX/1tb/z8//y8v/29v/w8P/UFD/zs7/gYH/YmL/VFT/Tk7/oaH/x8f/T0//ycn/xcX/XV3/Q0P/WFj/fn7/8fH/dXX/Xl7/ubn/2tr/4uL/8PD/zMz/VVX/wsL/8/P/ior/Y2P/jY3/zc3/qan/YGD/6en/pqb/V1f/Zmb/paX/U1P/t7f/2Nj/kpL/jIz/l5f/trb/6Oj/ra3/CmGvHQAAAOpJREFUeJxjZGBghINvDEAeAzeYDRV/zcAoCuJ952L8zs7wnYfxCVCFLEzDaw4GPsabjAwav9lAiv48VHnNIMZ4EahZ/SYDCIhKMz7/pfAVKMBgDDaVkfHZT6W/p4AMKyD3D+t5I8Z/N7UY9zGK6jMyXpK8a8l4UI/5HkjAk/HPJbCeY9avwALOfMd//uZ8DTTK8tlPkEDQHq6frK+A/GDGPRwgARPFwwy8Ynyv/qsc/s/wzfMqI2P48Z8//tnyPb2s9+m5mM5uRgZPIcbN5gwMr3UYDzgyHgc6nUHb7KAD0JZl0YznP91gAADjo0t/GfMLpwAAAABJRU5ErkJggg=="
+      //  placeholder: "../images/loader.gif"
     });
 });
 
@@ -55,19 +55,7 @@ $("#headerMenu").click(function(e)
     $("#headerDropdownIcon").removeClass("workmenuactive");
     $('#headerContainer').slideUp(300);
  });
-
 /* ############### header Toggle click === end  ############### */
-
-
-/* ############### header dropdown click === start ############### */
-$("#headerDropdownIcon").click(function(e) 
-{
-    e.stopPropagation();
-    $(this).toggleClass("workmenuactive");
-    $('#headerContainer').slideToggle(300);
- });
- /* ############### header dropdown click === end ############### */
-
 
 
 /* ############### body click === start ############### */
@@ -81,14 +69,10 @@ $('body').click(function (e) {
             $('#headerNavigation').slideUp(300);
         }
     }
-
-    if (!$(e.target).is('#headerContainer')) 
-    {
-        $("#headerDropdownIcon").removeClass("workmenuactive");
-        $('#headerContainer').slideUp(300);
-    }
  });
 /* ############### body click === end ############### */
+
+
 
 
 
@@ -128,3 +112,19 @@ function searchvalidation()
     }
 }
 /* ############### search form validation === end ############### */
+
+
+
+/* ############### filterwork === start ############### */
+function filterwork(val)
+{
+    $("#pageloader").fadeIn(200);
+    $(".workmenu dl dt").removeClass("workactive");
+    $(".workboxcontainer").slideUp(500);
+
+    $("#worktab_"+val).addClass("workactive");
+    $("#workbox_"+val).slideDown(500);
+    setTimeout(function(){ $("#pageloader").fadeOut(300);  },1000);
+
+ }
+/* ############### filterwork === end  ############### */

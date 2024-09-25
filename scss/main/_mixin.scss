@@ -60,7 +60,11 @@
     justify-content:flex-end; 
     align-items:flex-end;
   }
-  
+  @mixin fAC(){
+    display:flex;
+    justify-content:space-around; 
+    align-items:center;
+  }
   @mixin br2($v1, $v2, $v3, $v4) {
     border-radius:$v1 $v2 $v3 $v4;
   }

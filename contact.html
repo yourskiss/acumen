@@ -31,21 +31,7 @@
             <nav class="headerNavigation" id="headerNavigation">
                 <ul>
                     <li><a href="index.html" id="page_home">Home</a></li>
-                    <li class="headerDropdownContainer">
-                        <a href="work.html" id="page_work">Work</a> 
-                        <span id="headerDropdownIcon"></span>
-                        <div class="headerContainer" id="headerContainer">
-                            <dl>
-                                <dd><strong>Work</strong><b></b></dd>
-                                <dt><a href="#">Identity</a></dt>
-                                <dt><a href="#">Communications</a></dt>
-                                <dt><a href="#">Packaging</a></dt>
-                                <dt><a href="#">Campaigns</a></dt>
-                                <dt><a href="#">Digital</a></dt>
-                                <dt><a href="#">Films</a></dt>
-                            </dl>
-                        </div>
-                    </li>
+                    <li><a href="work.html" id="page_work">Work</a> </li>
                     <li><a href="about-us.html" id="page_about">About Us</a></li>
                     <li><a href="contact.html" id="page_contact">Contact</a></li>
                 </ul>
@@ -68,10 +54,10 @@
             <div class="contactcontainer">
                 <h2>WRITE TO US</h2>
                 <div class="contactFrom"> 
-                    <form>
+                    <form id="contactform" name="contactform">
                         <div class="contactField cfLeft">
                             <p>First Name <small>(required)</small></p>
-                            <input class="fcInput" type="text" name="firstname" id="firstname" required />
+                            <input class="fcInput" type="text" name="firstname" id="firstname" />
                             <span class="fcError" id="error_firstname">First Name Required</span>
                         </div>
                         <div class="contactField cfRight">
@@ -81,20 +67,22 @@
                         </div>
                         <div class="contactField">
                             <p>Email Address  <small>(required)</small></p>
-                            <input class="fcInput" type="text" name="emailid" id="emailid" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+                            <input class="fcInput" type="text" name="emailid" id="emailid" />
                             <span class="fcError" id="error_emailid">Email Address Required</span>
                         </div>
                         <div class="contactField">
                             <p>Subject  <small>(required)</small></p>
-                            <input class="fcInput" type="text" name="subject" id="subject" required />
+                            <input class="fcInput" type="text" name="subject" id="subject" />
                             <span class="fcError" id="error_subject">Subject Required</span>
                         </div>
                         <div class="contactField">
                             <p>Message  <small>(required)</small></p>
-                            <input class="fcInput" type="text" name="message" id="message" required />
+                            <input class="fcInput" type="text" name="message" id="message" />
                             <span class="fcError" id="error_message">Message Required</span>
                         </div>
                         <div class="contactField cfCenter">
+                            <input type="hidden" name="datetime" id="datetime" />
+                            <input type="hidden" name="status" id="status" value="open" />
                             <button class="fcButton" type="submit" id="submit">Submit</button>
                         </div>
                     </form>
@@ -154,7 +142,7 @@
                 <div class="footerbox footerbox2">
                     <h2>Talk to us or ask us anything.</h2>
                     <ul>          
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Work with us</a></li>
                     </ul>
@@ -182,7 +170,7 @@
 <div class="pageloader" id="pageloader">
     <div>
         <aside></aside>
-        <h2>Loading...</h2>
+        <h2>Please wait...</h2>
     </div>
 </div>
 <!-- pageloader End -->
@@ -221,6 +209,91 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/lazy.min.js"></script>
 <script src="js/common.js"></script>
-
+ 
+<script>
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        $("#datetime").val(datetime);
+        
+    $('#contactform').on('submit', function(e) {
+            e.preventDefault();
+            $(".fcError").hide().html('');
+            const regexMobile = /^[6789][0-9]{9}$/i;
+            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i
+            if($("#firstname").val() == '')
+            {
+                $("#error_firstname").show().html('Please enter your First Name');
+                return false;
+            }
+            /*
+            else if($("#lastname").val() == '')
+            {
+                $("#error_lastname").show().html('Please enter your Last Name');
+                return false;
+            }
+            else if($("#phonenumber").val() == '')
+            {
+                $("#error_phonenumber").show().html('Please enter your Phone number');
+                return false;
+            }
+            else if($("#phonenumber").val().length != 10)
+            {
+                $("#error_phonenumber").show().html('Phone Number must have at least 10 Digit');
+                return false;
+            }
+            else if(!regexMobile.test($("#phonenumber").val()))
+            {
+                $("#error_phonenumber").show().html("Invalid mobile number!");
+                return false;
+            }
+            */
+            else if($("#emailid").val() == '')
+            {
+                $("#error_emailid").show().html('Please enter your Email id');
+                return false;
+            }
+            else if(!regexEmail.test($("#emailid").val()))
+            {
+                $("#error_emailid").show().html('Please enter valid Email id');
+                return false;
+            }
+            else if($("#subject").val() == '')
+            {
+                $("#error_subject").show().html('Please enter Subject');
+                return false;
+            }
+            else if($("#message").val() == '')
+            {
+                $("#error_message").show().html('Please enter Message');
+                return false;
+            }
+            else 
+            {
+                $("#pageloader").fadeIn(300);
+                $(".fcError").hide().html('');
+                 console.log($(this).serialize());
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://script.google.com/macros/s/AKfycbwQ5XXvyeWecAbyRkJ8dXHextfsknbBAJ2gyStGKsCvicDI5cAnE-2QAr7v9n_e6PQK/exec',
+                    data:  $(this).serialize(),
+                    success: function(response) 
+                    {
+                        window.location.href ="thankyou.html"
+                    },
+                    error: function(err) 
+                    {
+                        $("#pageloader").fadeOut(300);
+                        alert('Error submitting form');
+                    }
+                });
+                return true;
+            }
+        });
+</script>
 </body>
 </html>
