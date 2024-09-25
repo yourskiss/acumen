@@ -100,6 +100,7 @@
         margin:2rem 0 0 0; padding: 0; width: 100%;  float: left; display: grid;  gap: 2rem; 
         div { 
             img { width: 100%; cursor: pointer; }
+            video { width: 100%; height: auto; float: left; display: block; margin: 0; padding: 0; border: 0; outline: none; }
             grid-column-start: 1; grid-row-start: 1; 
         }
     }
@@ -115,7 +116,8 @@
         margin: 2rem 0 0 0; padding: 0; width: 100%;  float: left; display: grid;  gap: 2rem;   
         div { 
             img { width: 100%; cursor: pointer; }
-            img.marginbottom { margin-bottom: 2rem; }
+            video { width: 100%; height: auto; float: left; display: block; margin: 0; padding: 0; border: 0; outline: none; }
+            .marginbottom { margin-bottom: 2rem; }
             &:first-child { grid-column-start: 1; grid-row-start: 1; }
             &:last-child { grid-column-start: 2; grid-row-start: 1; }
         }
@@ -124,6 +126,7 @@
         margin: 2rem 0 0 0; padding: 0;width: 100%;  float: left; display: grid;  gap: 2rem;  
         div { 
             img { width: 100%; object-fit:cover; height: 100%; cursor: pointer; }
+            video { width: 100%; height: auto; max-height: 100%; float: left; display: block; margin: 0; padding: 0;  outline: none; }
             &:first-child {  grid-column-start: 1; grid-row-start: 1; }
             &:last-child {  grid-column-start: 2; grid-row-start: 1; }
         }

@@ -1693,6 +1693,16 @@ img.lazy {
   width: 100%;
   cursor: pointer;
 }
+.workwrap .workOne div video {
+  width: 100%;
+  height: auto;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
 .workwrap .workTwoBigOne {
   margin: 2rem 0 0 0;
   padding: 0;
@@ -1729,7 +1739,17 @@ img.lazy {
   width: 100%;
   cursor: pointer;
 }
-.workwrap .workTwoMultiple div img.marginbottom {
+.workwrap .workTwoMultiple div video {
+  width: 100%;
+  height: auto;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+.workwrap .workTwoMultiple div .marginbottom {
   margin-bottom: 2rem;
 }
 .workwrap .workTwoMultiple div:first-child {
@@ -1753,6 +1773,16 @@ img.lazy {
   object-fit: cover;
   height: 100%;
   cursor: pointer;
+}
+.workwrap .workTwo div video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 .workwrap .workTwo div:first-child {
   grid-column-start: 1;
